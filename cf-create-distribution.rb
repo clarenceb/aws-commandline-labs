@@ -2,17 +2,21 @@ require 'right_aws'
 require 'json'
 
 # Creates a CloudFront Distribution (origin can be S3 bucket or Custom)
+# Parameters:
+#   - ORIGIN_HOST (required) - the S3 object public DNS name or a custom URI
+#   - DEFAULT_ROOT_OBJECT (optional) - e.g. index.html
 
 ORIGIN_HOST=ARGV.shift
 raise "Missing Origin Host" if ORIGIN_HOST.nil?
+
+DEFAULT_ROOT_OBJECT=ARGV.shift
 
 acf = RightAws::AcfInterface.new(ENV['AWSAccessKeyId'], ENV['AWSSecretKey'])
 
 s3_origin = ORIGIN_HOST.match(/s3\.amazonaws\.com/)
 
-puts "Creating CloudFront distribution for #{ORIGIN_HOST} =>"
-
 config = { :enabled => true }
+config[:default_root_object] = DEFAULT_ROOT_OBJECT unless DEFAULT_ROOT_OBJECT.nil?
 
 if s3_origin
   config[:comment] = "CloudFront distribution for S3 Bucket [#{ORIGIN_HOST}]"
@@ -27,6 +31,7 @@ else
   }
 end
 
+puts "Creating CloudFront distribution for #{ORIGIN_HOST} =>"
 json_result = acf.create_distribution(config)
 puts JSON.pretty_generate(json_result)
 
