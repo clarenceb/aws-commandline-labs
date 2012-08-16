@@ -24,7 +24,7 @@ function export_aws_credentials() {
 }
 
 function run() {
-  if [ -z "$@" ]; then
+  if [ "$#" == "0" ]; then
     echo "Missing Ruby file to execute"
     exit 1
   fi

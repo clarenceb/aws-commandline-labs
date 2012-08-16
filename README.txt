@@ -2,4 +2,7 @@
 
 Further information:
 
-aws-s3 Ruby gem: http://amazon.rubyforge.org/
+aws-sdk ruby gem:
+  http://aws.amazon.com/sdkforruby/
+  http://docs.amazonwebservices.com/AWSRubySDK/latest/
+
