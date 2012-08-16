@@ -1,10 +1,10 @@
-Some commandline examples for AWS training.
-
-Pre-requisities:
+Commandline examples for AWS commandline learning.
 ----------------
+
+### Pre-requisities:
 - Ruby 1.8.7+
 - Ruby Gems 1.3.7+
-- Bundler gem
+- Bundler 1.0+
 
 You can install Ruby via RVM if you like.
 If you don't have Bundler gem installed then the aws.sh script will
@@ -14,7 +14,7 @@ Bundler (or just make sure you install Bundler first).
 
 Type:
 
-  [sudo] gem install bundler
+    [sudo] gem install bundler
 
 - AWS account
 
@@ -27,19 +27,20 @@ Put these in a file called 'aws-credentials.txt' (see the aws-credentials-templa
 
 Usage:
 
-  ./aws.sh <command_name> [<args>]
+    ./aws.sh <command_name> [<args>]
 
-  e.g.
+e.g.
 
-  ./aws.sh s3-create-static-website.rb my-bucket
+    ./aws.sh s3-create-static-website.rb my-bucket
 
 
-Further information:
---------------------
+###   Further information:
 
 aws-sdk ruby gem:
-  http://aws.amazon.com/sdkforruby/
-  http://docs.amazonwebservices.com/AWSRubySDK/latest/
 
-right_aws ruby gem:
-  http://rightscale.rubyforge.org/right_aws_gem_doc/
+- [http://aws.amazon.com/sdkforruby/](http://aws.amazon.com/sdkforruby/)
+- [http://docs.amazonwebservices.com/AWSRubySDK/latest/](http://docs.amazonwebservices.com/AWSRubySDK/latest/)
+
+right\_aws ruby gem:
+
+- [http://rightscale.rubyforge.org/right\_aws_gem_doc/](http://rightscale.rubyforge.org/right_aws_gem_doc/)
