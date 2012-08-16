@@ -16,6 +16,15 @@ Type:
 
   [sudo] gem install bundler
 
+- AWS account
+
+You will need to sign up for an AWS account (with a valid credit card).
+Note that its up to you to check and clean up any resources via the AWS Management Console
+after running these exercises to ensure you don't have any resources left over.
+
+Note down your Access Key and Secret Key from the Security Credetials tab after you log into the AWS Console.
+Put these in a file called 'aws-credentials.txt' (see the aws-credentials-template.txt file).
+
 Usage:
 
   ./aws.sh <command_name> [<args>]
