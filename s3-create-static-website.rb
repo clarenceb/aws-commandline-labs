@@ -29,10 +29,12 @@ policy = AWS::S3::Policy.new(:statements => [
 
 bucket.policy = policy
 
-Dir['public/*'].each do |file|
-  file_name = file.gsub(/^public\//,'')
-  bucket.objects.create(file_name, File.read(file))
-  puts "--> Uploading file '#{file_name}'' to bucket '#{BUCKET_NAME}'"
+Dir['public/**/*'].each do |file|
+  unless File.directory? file
+    file_name = file.gsub(/^public\//,'')
+    bucket.objects.create(file_name, File.read(file))
+    puts "--> Uploading file '#{file_name}' to bucket '#{BUCKET_NAME}'"
+  end
 end
 
 puts "-------------------------"
