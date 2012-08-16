@@ -1,0 +1,57 @@
+Exercises to try out from the command line.
+
+-------------------------------------------------------------------------
+
+[1.] Create a S3 bucket to host a static web site
+
+./aws.sh s3-create-static-website.rb <my_s3_bucket_name>
+
+Note: S3 bucket name must be globally unique!
+
+Note: Make sure you follow the manual steps to enable the S3 bucket to be a static website
+
+Try: Accessing the index.html object directly from the bucket with:
+https://s3.amazonaws.com/<my_s3_bucket_name>/index.html
+
+Try: Navigating to the About page.  Does it work?
+
+-------------------------------------------------------------------------
+
+[2.] Access your static web site via the S3 website URL in your web browser
+
+http://<my_s3_bucket_name>.s3-website-us-east-1.amazonaws.com/
+
+-------------------------------------------------------------------------
+
+[3.] Create a CloudFront distribution for your static website in S3
+
+./aws.sh cf-create-distribution.rb <my_s3_bucket_name>.s3.amazonaws.com index.html
+
+Note down the AWS_ID from the command output.
+
+-------------------------------------------------------------------------
+
+[4.] Query the CloudFront distribution to check it is ready (Status = 'Deployed')
+
+./aws.sh cf-query-distribution.rb <AWS_ID>
+
+Note: It may take up to 15 minutes to deploy to the global CDN.
+
+-------------------------------------------------------------------------
+
+[5.] Get the CloudFront Domain Name once the distribution is Deployed
+
+./aws.sh cf-query-distribution.rb <AWS_ID>
+
+Note the line that looks like:
+
+"domain_name": "xxxxxxxxxxx.cloudfront.net",
+
+Open this in your browser:
+
+http://xxxxxxxxxxx.cloudfront.net
+
+Note: You should now be accessing your static website via the CloudFront CDN (via 'nearest' edge location to you).
+
+-------------------------------------------------------------------------
+

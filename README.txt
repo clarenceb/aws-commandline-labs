@@ -1,6 +1,7 @@
 Some commandline examples for AWS training.
 
 Pre-requisities:
+----------------
 - Ruby 1.8.7+
 - Ruby Gems 1.3.7+
 - Bundler gem
@@ -13,16 +14,19 @@ Bundler (or just make sure you install Bundler first).
 
 Type:
 
-[sudo] gem install bundler
+  [sudo] gem install bundler
 
 Usage:
 
-./aws.sh <command_name> [<args>]
+  ./aws.sh <command_name> [<args>]
 
-e.g. ./aws.sh s3-create-static-website.rb my-bucket
+  e.g.
+
+  ./aws.sh s3-create-static-website.rb my-bucket
 
 
 Further information:
+--------------------
 
 aws-sdk ruby gem:
   http://aws.amazon.com/sdkforruby/
