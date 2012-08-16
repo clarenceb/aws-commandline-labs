@@ -1,6 +1,8 @@
 require 'right_aws'
 require 'json'
 
+# Creates a CloudFront Distribution (origin can be S3 bucket or Custom)
+
 ORIGIN_HOST=ARGV.shift
 raise "Missing Origin Host" if ORIGIN_HOST.nil?
 

@@ -1,5 +1,9 @@
 require 'aws'
 
+# Creates a S3 bucket and uploads some html pages to it for a static web site.
+#   - Adds a bucket policy for public read
+#   - Currently making the S3 bucket into a website is a manual process (see output form command for steps)
+#
 # Further info on Hosting Websites on Amazon S3:
 #   http://docs.amazonwebservices.com/AmazonS3/latest/dev/WebsiteHosting.html
 

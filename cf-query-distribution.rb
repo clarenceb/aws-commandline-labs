@@ -1,6 +1,8 @@
 require 'right_aws'
 require 'json'
 
+# Queries a CloudFront distribution (using the AWS ID)
+
 AWS_ID=ARGV.shift
 raise "Missing AWS_ID" if AWS_ID.nil?
 
