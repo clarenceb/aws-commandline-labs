@@ -39,8 +39,8 @@ e.g.
 aws-sdk ruby gem:
 
 - [http://aws.amazon.com/sdkforruby/](http://aws.amazon.com/sdkforruby/)
-- [http://docs.amazonwebservices.com/AWSRubySDK/latest/](http://docs.amazonwebservices.com/AWSRubySDK/latest/)
+- [http://docs.amazonwebservices.com/AWSRubySDK/latest/frames.html](http://docs.amazonwebservices.com/AWSRubySDK/latest/frames.html)
 
 right\_aws ruby gem:
 
-- [http://rightscale.rubyforge.org/right\_aws_gem_doc/](http://rightscale.rubyforge.org/right_aws_gem_doc/)
+- [http://rightscale.rubyforge.org/right\_aws\_gem\_doc/](http://rightscale.rubyforge.org/right_aws_gem_doc/)
