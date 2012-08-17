@@ -1,5 +1,5 @@
-Commandline examples for AWS commandline learning.
---------------------------------------------------
+Commandline examples for AWS learning.
+--------------------------------------
 
 ### Overview
 
