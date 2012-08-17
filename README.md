@@ -7,8 +7,14 @@ This repository consists of a bunch of command line scripts for working with AWS
 They make use of the official Ruby AWS SDK and the RightScale (right\_aws) gem
 (used for CloudFront access, since the Ruby AWS SDK does not appear to support it yet).
 
-The scripts are not intended to be "DRY" and use abstraction over the AWS Ruby gems
-so that you can learn how things work closer to the REST API level.
+The scripts are not intended to be "DRY" and not use abstraction over the AWS Ruby gems
+so that you can learn how things work closer to the REST API level
+
+There are higher level Ruby gems such as [Fog](https://github.com/fog/fog/) and
+[Knife EC2](https://github.com/opscode/knife-ec2/) which are worth looking at
+if you do not want to abstract the details of working with AWS resources or
+even working across different clouds (in [Fog's](http://fog.io/1.5.0/index.html) case).
+
 
 This is still work-in-progress and may be continued or abandoned depending on how
 useful I feel this stuff becomes.  It's currently a repo for me to practices access
@@ -25,7 +31,7 @@ the AWS REST APIs via the command line.
 ### Pre-requisities:
 - Ruby 1.8.7+
 - Ruby Gems 1.3.7+
-- Bundler 1.0+
+- Bundler 1.0.x+
 
 You will need Ruby/RubyGems installed on your system.  You can either
 use the system default, installed via a package or use RVM to manage
@@ -56,6 +62,11 @@ Note down your 'Access Key ID' and 'Secret Access Key' from the Security Credeti
 
     ./aws.sh s3-create-static-website.rb my-bucket
 
+### Getting Started
+
+Have a look at the **Exercises.txt** file as a starting point for some exercises which have a kind of sequence to them.  Otherwise, you can just execute the individual commands and modify them to understand what's possible.  Have a look at the [Ruby AWS SDK API docs](http://docs.amazonwebservices.com/AWSRubySDK/latest/frames.html) to guide your learning.
+
+Currently, these scripts assume a Linux or MacOS X environment but I might add some Windows scripts as well in the future.
 
 ### Further information:
 
